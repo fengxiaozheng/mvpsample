@@ -1,4 +1,4 @@
-package com.example.david.myapp.uii.activity;
+package com.example.david.myapp.ui.activity;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.david.myapp.R;
-import com.example.david.myapp.bean.UserInfo;
+import com.example.david.myapp.bean.WeatherInfo;
 import com.example.david.myapp.model.MainModel;
 import com.example.david.myapp.presenter.MainPresenter;
 import com.example.david.myapp.view.MainView;
@@ -42,8 +42,8 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
 
     @Override
     public void getDatas(MainModel model) {
-        UserInfo info = model.getData();
-        String ss = info.getUserName();
+        WeatherInfo info = model.getWeatherinfo();
+        String ss = info.getCity();
         textView.setText(ss);
     }
 }

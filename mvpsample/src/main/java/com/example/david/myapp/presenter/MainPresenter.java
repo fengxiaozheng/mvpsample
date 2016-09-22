@@ -26,24 +26,21 @@ public class MainPresenter extends BasePresenter<MainView> {
     }
 
     private void goData(){
-        addSubscription(apiStore.getData("8980ccbd-450a-47e3-8b6e-4a89a9d1ac26",0),
+        addSubscription(apiStore.loadData("101010100"),
                 new SubscriberCallback<>(new ApiCallback<MainModel>() {
 
                     @Override
                     public void onSuccess(MainModel model) {
-                        System.out.println("sssssssssss11111"+model.getData().getUserName());
                         view.getDatas(model);
                     }
 
                     @Override
                     public void onFailure(int code, String msg) {
-                        System.out.println("sssssssssss22222"+code);
                         view.failure(msg);
                     }
 
                     @Override
                     public void onCompleted() {
-                        System.out.println("sssssssssss33333");
                     }
                 }));
     }
