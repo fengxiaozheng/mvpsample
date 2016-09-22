@@ -1,0 +1,3 @@
+include ':app', ':Giftapp', ':mvpsample', ':Retrofit2RxjavaDemo', ':JPushExample', ':LiulishuoPreviewapp', ':RxPermission', ':AndroidRecyclerViewDemoapp', ':ItemTouchHelperapp', ':AndroidMVPSample', ':pdmaster', ':pdmasterapp', ':android-pathview', ':android-pathviewsample'
+include ':revealLayout'
+include ':modelLoad'
